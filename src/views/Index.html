@@ -1,0 +1,52 @@
+<html>
+    
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>My Page</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400&display=swap" rel="stylesheet">
+        <link rel='stylesheet' href="Style.css" >
+    </head>
+    <body>
+        <div class='container' >
+            <div class="display" id='display' >
+                <h4 class='form-headline' >Highest Prime Number is</h2>
+                <h1 id='result' ></h1>
+            </div>
+            <form class='form-row' id='form' >
+                <h2 class='form-headline' >Get Highest Prime Number</h2>
+                <div class='form-row'>
+                    <label class='form-label' >Input Number</label>
+                    <input id='input' class='form-input' type='number' />
+                </div>
+                <button id='button' type="submit" class='form-button'>Submit</button>
+            </form>
+        </div>
+        <script>
+            const input = document.getElementById('input')
+            const button = document.getElementById('button')
+            const display = document.getElementById('display')
+            const resultDisplay = document.getElementById('result')
+
+            function handleSubmit(e) {
+                e.preventDefault();
+                button.textContent = 'Loading ...'
+                button.disabled = true
+                
+                fetch(`/find/${input.value}`, { method:'POST'}).then(res => res.json()).then( result => {
+                    button.textContent = 'Submit'
+                    button.disabled = false
+                    console.log('result', result)
+                    display.style.display = 'block'
+                    resultDisplay.textContent = result.primeNumber
+                })
+            }
+
+            const form = document.getElementById('form')
+            form.addEventListener('submit', handleSubmit)
+            
+        </script>
+    </body>
+</html>

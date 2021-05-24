@@ -18,4 +18,4 @@ const highestPrimeNumber = (num: number): number => {
     return num > 1;
   };
   
-  export default  highestPrimeNumber ;
+  export   {highestPrimeNumber, isPrime} ;

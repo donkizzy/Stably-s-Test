@@ -1,7 +1,7 @@
 import cors from "cors";
-import express, { json, NextFunction, Request, Response } from "express";
+import express, { json, Request, Response } from "express";
 import path from 'path';
-import highestPrimeNumber from "./src/utils/HighestPrimeNumber";
+import { highestPrimeNumber } from "./src/utils/HighestPrimeNumber";
 
 // Initialize express app
 const app = express();

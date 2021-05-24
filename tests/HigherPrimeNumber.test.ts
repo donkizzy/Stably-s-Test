@@ -13,5 +13,7 @@ test('Tests for Highest Prime Number lesser than a number',() => {
     expect(highestPrimeNumber(1)).toBe(0);
     expect(highestPrimeNumber(0)).toBe(0);
     expect(highestPrimeNumber(-5)).toBe(0);
-    expect(highestPrimeNumber(7)).toBe(5);
+    expect(highestPrimeNumber(5003)).toBe(4999);
+    expect(highestPrimeNumber(273735)).toBe(273727);
+    
 });

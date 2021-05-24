@@ -2,12 +2,12 @@
   "name": "stablys-test",
   "version": "1.0.0",
   "description": "A project to find the highest prime number lesser than its input",
-  "main": "index.js",
+  "main": "Index.js",
   "scripts": {
     "clean": "rm -rf build",
     "build": "npm run clean && npx tsc",
-    "start": "node build/index.js",
-    "development": "npm run build && node build/index.js",
+    "start": "node build/Index.js",
+    "development": "npm run build && node build/Index.js",
     "dev": "nodemon --watch . -e ts --exec npm run development"
   },
   "author": "Amos Godwin",

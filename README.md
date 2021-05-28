@@ -6,8 +6,8 @@ A simple prime checker system that allows users to get the highest prime number 
 ## Table Of Contents
 
 - [Frontend](https://prime-checker-frontend.herokuapp.com/) 
-- [Design Decisions](nfdjfj) 
-- [Learning](goog)
+- [Design Decisions](#desgin-decision) 
+- [Learning](./LEARNING.md)
 
 ## Requirements
 
@@ -76,7 +76,7 @@ Run the tests
 ## Desgin Decision
 The problem was to find the highest prime number less than the  number itself ,the first step was to be able to identify prime numbers then  be able to decrease the numbers gradually and check if they were preime numbers and the first prime number that we seek 
 
-# But What is a Prime Number  ?
+### But What is a Prime Number  ?
 It is a number that is divisible only by itself and 1 (e.g. 2, 3, 5, 7, 11).
 
 we could do something like this 

@@ -4,17 +4,19 @@
   "description": "A project to find the highest prime number lesser than its input",
   "main": "Index.js",
   "scripts": {
-    "clean": "rm -rf build",
-    "build": "npm run clean && npx tsc",
+    "clean": "rimraf build",
+    "build": "npm run clean && npm run copy-files && npx tsc ",
     "start": "node build/Index.js",
     "development": "npm run build && node build/Index.js",
     "dev": "nodemon --watch . -e ts --exec npm run development",
-    "test": "jest"
+    "test": "jest",
+    "copy-files": "copyfiles src/public/* src/views/* build"
   },
   "author": "Amos Godwin",
   "license": "ISC",
   "dependencies": {
     "@types/cors": "^2.8.10",
+    "@types/supertest": "^2.0.11",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "nodemon": "^2.0.7",
@@ -27,9 +29,9 @@
     "@types/jest": "^26.0.23",
     "@types/node": "^15.6.0",
     "@types/nodemon": "^1.19.0",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "copyfiles": "^2.4.1",
     "jest": "^26.6.3",
+    "rimraf": "^3.0.2",
     "superagent": "^6.1.0",
     "supertest": "^6.1.3"
   }

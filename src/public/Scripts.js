@@ -8,7 +8,7 @@ function handleSubmit(e) {
   button.textContent = "Loading ...";
   button.disabled = true;
 
-  fetch(`/find`, {
+  fetch(`/`, {
     method: "POST",
     body: JSON.stringify({ num: input.value }),
     headers: { "Content-Type": "application/json" },
@@ -17,7 +17,6 @@ function handleSubmit(e) {
     .then((result) => {
       button.textContent = "Submit";
       button.disabled = false;
-      console.log("result", result);
       display.style.display = "block";
       resultDisplay.textContent = result.primeNumber;
     });

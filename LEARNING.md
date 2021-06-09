@@ -37,3 +37,8 @@ Jest is a JavaScript testing framework designed to ensure correctness of any Jav
 i did my learning on jest on  
 https://jestjs.io/
 
+### Docker 
+Docker was a bit challenging but i was able to figure it out  and this resources helped me the most 
+https://www.youtube.com/watch?v=3o_DEJ9tB5A
+https://www.youtube.com/watch?v=LQjaJINkQXY&t=82s
+https://nodejs.org/en/docs/guides/nodejs-docker-webapp/

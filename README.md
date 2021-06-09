@@ -67,7 +67,8 @@ Run the tests
     
     $ npm test 
 
-
+### Docker 
+    $ docker pull fameousamos/stably2021:latest
 
 ## Libraries Used
 
@@ -117,4 +118,4 @@ if we find the square root of the input and loop to that point alone we can achi
             return 0;
             };
 
-            
+The time complexity of this function is O(n2)    

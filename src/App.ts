@@ -10,7 +10,7 @@ app.use(cors());
 app.use(json());
 app.use(express.static(path.join(__dirname, '../src/public')));
 app.get("/", (req: Request, res: Response): void => {
-    res.status(200).sendFile(path.join(__dirname, '../src/views', 'index.html'));
+    res.status(200).sendFile(path.join(__dirname, './views', 'Index.html'));
 });
 app.post('/', (req: Request, res: Response): void => {
     var primeNumber = highestPrimeNumber(Number(req.body.num));
